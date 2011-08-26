@@ -1,0 +1,8 @@
+---
+layout: default
+---
+<article>
+  <time datetime="{{ page.date | xmlschema }}">{{ page.date | date: "%d %b, %Y" }}</time>
+  <h2>{{ page.title }}</h2>
+  {{ content }}
+</article>
