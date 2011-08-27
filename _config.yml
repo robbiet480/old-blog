@@ -1,3 +1,4 @@
 markdown: rdiscount
 pygments: true
 permalink:  /:year/:month/:title/
+url: http://robbie.io
