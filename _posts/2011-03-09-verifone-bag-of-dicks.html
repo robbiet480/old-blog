@@ -1,0 +1,29 @@
+---
+layout: post
+title: VeriFone, Bag of Dicks
+---
+<h2>This is from blog.robbiet.us</h2>
+
+<p>So earlier today, VeriFone's CEO, Douglas Bergeron, released an "open letter" about a "security vulnerability" in Square. Never heard of Square? Basically, it is a credit card processing service that can be used by anyone. You sign up for free, get a free hardware reader dongle sent to you and away you go, with the ability to swipe credit cards into your mobile device (iOS, Android) and instantly charge people for goods and services.</p>
+
+<p>What VeriFone did today in my mind is anti-competitive and honestly, a terrible PR move. The letter states that because the Square dongle is un-encrypted when transferring data between the dongle and the device (via headphone jack) you could easily write an app which looked just like the Square app, interpreted that data the same way as the Square app, but only stole the credit card information for later use by skimmers.</p>
+
+<p>VeriFone could have easily and quietly told Square via their security email (security &lt;at&gt; squareup &lt;dot&gt; com), contacted them through phone, employees, etc. Instead, they decide to expose the "flaw" to the world by launching <a title="SQ Skim" href="http://www.sq-skim.com/">sq-skim.com</a>, their "open letter". In it, they detail the flaw. I was angry while reading until this point, when I became enraged:
+<blockquote>
+<h5>Today we are handing a copy of the application over to Visa, MasterCard, Discover, American Express, and JP Morgan Chase (Square's credit card processor), and we invite their comments.</h5>
+</blockquote></p>
+<p>That right there is why VeriFone is getting the first "Bag of Dicks" title. There was absolutely no reason to do this. If any of the aforementioned companies had any issue whatsoever, I am sure they would have talked with Square about it.</p>
+
+<p>Now, you may be wondering why VeriFone cares. Well, VeriFone was founded in the 80's in Hawaii. They have been making payment processing systems for years now. I am sure that if you live in the US or Europe you have used a VeriFone terminal in the recent past, possibly today. VeriFone also makes a device called the VeriFone PayWare. It is a adapter/case for iOS devices that allows you to accept credit cards... just like Square. Recently, if you have been watching this sector of tech, you may have seen that Square has been making great strides, much to VeriFone's dismay. Square, just a few weeks ago, dropped some of its processing charges. Square is the underdog in a market controlled by very few players.</p>
+
+<p>So, hopefully by now you are seeing the pieces fall together on VeriFone. They are a company which has been losing their footing. So, instead of stepping up their game, they trash their #1 competitor.</p>
+
+<p>Did I mention there is a security vulnerability in PayWare? Oh, I didn't? Well, there is. See, in PayWare, you can manually type in credit card numbers. You also can in Square. This doesn't seem like an issue except for the fact that you could easily make an app that looks like the PayWare app, buy a reader which is somewhat cheap, then whenever you tried to accept payment via reader, simply say, "Oops, my reader isn't working, let me type in the number automatically". Most consumers will not be checking that carefully so a skimmer could very easily also grab the name on the card, expiration date and CVC/CVV number from the back. This sounds like a big security hole to me. Maybe I should buy <a title="vf-skim.com" href="http://vf-skim.com">vf-skim.com</a>. In fact, let me do that right now. Pa-pow, I own it, and will be redirecting it to this post most likely.</p>
+
+<p>Why am I getting so upset about this? Thanks for asking! Recently, I started working with a museum startup called MADE (Museum of Art and Digital Entertainment). We recently had a booth on the show floor at GDC where we were accepting donations for our startup via Square in exchange for some gift items. If it had been this week instead of last, we could very well have lost money due to the fact that people were aware of the VeriFone "open letter" and didn't trust us or Square. This post will most certainly damage small business and non-profits like us, due to the negative image that VeriFone has now given Square.</p>
+
+<p>Anyway, point is, VeriFone handled this situation very poorly and needs to work on its own security before calling others out, especially the underdog.</p>
+
+<p>PS: Apple: VeriFone used the Enterprise Distribution method in order to distribute their proof of concept app. This is in direct violation of your iOS Developer Program agreements that everyone must sign. I implore you to consider invalidating your agreements with VeriFone and removing their apps from the App Store.</p>
+
+<p><strong>UPDATE: </strong>Here is the class-dump: <a title="https://gist.github.com/863448" href="https://gist.github.com/863448">https://gist.github.com/863448</a> and here is the IPA: <a title="http://heylookit.me/58Bq" href="http://heylookit.me/58Bq">http://heylookit.me/58Bq</a></p>
