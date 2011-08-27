@@ -5,7 +5,7 @@ title: robbie.io
 <div id="home">
 <article>
   <time datetime="{{ site.posts.first.date | xmlschema }}">{{ site.posts.first.date | date: "%d %b, %Y" }}</time>
-  <h2><a class="post_title" href="http://robbie.io/{{ site.posts.first.url }}">{{ site.posts.first.title }}</a></h2>
+  <h2><a class="post_title" href="{{ site.posts.first.url }}">{{ site.posts.first.title }}</a></h2>
   {{ site.posts.first.content }}
 </article>
 
