@@ -14,4 +14,4 @@ The following directories and their contents are Copyright Robert Trencheny. You
 * _posts/
 * images/
 
-All other directories and files are GPL Licensed. Feel free to use the HTML and CSS as you please. If you do use them, a link back to [http://github.com/robbiet480/robbie.io] would be appreciated, but is not required.
+All other directories and files are GPL Licensed. Feel free to use the HTML and CSS as you please. If you do use them, a link back to [http://github.com/robbiet480/robbie.io](http://github.com/robbiet480/robbie.io) would be appreciated, but is not required.
