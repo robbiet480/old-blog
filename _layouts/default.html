@@ -29,7 +29,7 @@
    <meta name="description" content="Robbie Trencheny's main dumping ground for writing">
    <meta name="author" content="Robbie Trencheny">
    <meta name="robots" content="all">
-   <meta name="copyright" content="2011 Robbie Trencheny">
+   <meta name="copyright" content="© 2011 Robbie Trencheny">
 
    <!-- iPhone -->
    <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -42,8 +42,10 @@
    
    <!-- jQuery and externals -->
    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-   <script type="text/javascript" src="/js/jquery.lifestream.js"></script>
+   <script type="text/javascript" src="https://raw.github.com/christianv/jquery-lifestream/master/jquery.lifestream.min.js"></script>
    <script type="text/javascript" src="http://fgnass.github.com/spin.js/spin.min.js"></script>
+   <script type="text/javascript" src="https://raw.github.com/madrobby/keymaster/master/keymaster.min.js"></script>
+   <script type="text/javascript" src="http://konami-js.googlecode.com/svn/trunk/konami.js"></script>
    <script src="http://connect.facebook.net/en_US/all.js"></script>
 
    <script type="text/javascript">
@@ -121,7 +123,19 @@
        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
      })();
-
+     
+     //Home
+     key('h', function(){ window.location = '/' });
+     //About
+     key('o', function(){ window.location = '/about.html' });
+     //Lifestream
+     key('l', function(){ window.location = '/life.html' });
+     //Contact
+     key('c', function(){ window.location = '/contact.html' });
+     
+     //Secret
+     konami = new Konami()
+     konami.load("http://nyan.cat/");
      </script>
 </head>
 <body>

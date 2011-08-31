@@ -44,7 +44,7 @@ module Jekyll
     priority :low
 
     # Domain that you are generating the sitemap for - update this to match your site.
-    BASE_URL = 'http://recursive-design.com'
+    BASE_URL = 'http://robbie.io'
 
     # Generates the sitemap.xml file.
     #

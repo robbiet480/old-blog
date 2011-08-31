@@ -300,6 +300,10 @@ display: block;
 padding-top: 2px;
 }
 
+#networks li a:hover img {
+	margin-left: 10px;
+}
+
 /* lifestream */
 #lifestream {
 padding-bottom: 50px;
