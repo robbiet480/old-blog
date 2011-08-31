@@ -3,28 +3,29 @@
 <head>
    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
    <title>{{ page.title }}</title>
+   
+   <!-- Atom Feed -->
    <link href="{{ site.url }}/atom.xml" rel="alternate" title="Robbie Trencheny" type="application/atom+xml" />
 
-   <!-- syntax highlighting CSS -->
-   <link rel="stylesheet" href="/css/syntax.css" type="text/css" />
-
-   <!-- Homepage CSS -->
-   <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
-  
-   <!-- Lifestream -->
-   <link rel="stylesheet" href="/css/lifestream.css" type="text/css" />
+   <!-- CSS -->
+   <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen, projection" />
 
    <!-- favicons -->
    <link rel="shortcut icon" type="image/x-icon" href="/images/new_rt.png" />
    <link rel="icon" type="image/x-icon" href="/images/new_rt.png" />
 
+   <!-- Open Graph -->
    <meta property="og:title" content="{{ page.title }}" />
    <meta property="og:type" content="blog" />
    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
-   <meta property="og:site_name" content="{{ site.url }}" />
-   <meta property="fb:admins" content="{{ site.facebook_uid }}" />
+   <meta property="og:site_name" content="robbie.io" />
    <meta property="og:description" content="Robbie Trencheny's main braindumping ground for writing" />
    <meta property="og:image" content="{{ site.url }}/images/new_rt.png" />
+   
+   <!-- Facebook -->
+   <meta property="fb:admins" content="{{ site.facebook_uid }}" />
+   
+   <!-- SEO -->
    <meta name="keywords" content="robbie trencheny, robbie, trencheny, mac, apple, startup, video chat, video, music, electronic, hacking, hackerspaces, oakland, california, oakland california, bay area, nerd, geek, teen">
    <meta name="description" content="Robbie Trencheny's main dumping ground for writing">
    <meta name="author" content="Robbie Trencheny">
@@ -38,7 +39,9 @@
    <link rel="apple-touch-icon-precomposed" href="{{ site.url }}/images/new_rt.png"/>
    
    <!-- Microformats -->
-   <link rel="me" type="text/html" href="http://twitter.com/robbie" /> 
+   <link rel="me" type="text/html" href="http://robbie.io">
+   <link rel="me twitter" type="text/html" href="http://twitter.com/robbie" /> 
+   <link rel="me blog" type="text/html" href="http://robbie.io" /> 
    
    <!-- jQuery and externals -->
    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
@@ -46,7 +49,7 @@
    <script type="text/javascript" src="http://fgnass.github.com/spin.js/spin.min.js"></script>
    <script type="text/javascript" src="https://raw.github.com/madrobby/keymaster/master/keymaster.min.js"></script>
    <script type="text/javascript" src="http://konami-js.googlecode.com/svn/trunk/konami.js"></script>
-   <script src="http://connect.facebook.net/en_US/all.js"></script>
+   <script type="text/javascript" src="http://connect.facebook.net/en_US/all.js"></script>
 
    <script type="text/javascript">
     FB.init({
@@ -133,7 +136,7 @@
      //Contact
      key('c', function(){ window.location = '/contact.html' });
      
-     //Secret
+     //Konami
      konami = new Konami()
      konami.load("http://nyan.cat/");
      </script>
@@ -141,6 +144,7 @@
 <body>
 
 <div class="site">
+  <!-- Header -->
   <div class="title">
     <a title="input/output">robbie/trencheny</a>
     <a class="extra" href="/">home</a>
@@ -152,22 +156,29 @@
   {{ content }}
   
   <hr>
+  <!-- Footer -->
   <footer>
     <p>
-      <a href="{{ base.url }}/about.html">Robbie Trencheny</a> is a 19 year old web developer and startup <a href="http://sutterstudios.com">founder</a> living in Oakland, California. You can follow me on <a href="http://twitter.com/robbie">Twitter</a>, hear what I listen to on <a href="http://last.fm/user/robbiet480/">Last.fm</a> or fork my code on <a href="http://github.com/robbiet480">GitHub</a>. If you want you can <a href="tel:+19258843728">call</a> me.
+      <a href="{{ base.url }}/about.html">Robbie Trencheny</a> is a 19 year old web developer and startup <a href="http://sutterstudios.com">founder</a> living in Oakland, California. You can follow me on <a href="http://twitter.com/robbie">Twitter</a>, hear what I listen to on <a href="http://last.fm/user/robbiet480/">Last.fm</a> or fork my code on <a href="http://github.com/robbiet480">GitHub</a>. If you want you can even <a href="tel:+19258843728">call</a> me.
     </p>
   </footer>
+  <!-- hCard -->
   <ul class="vcard">
       <li class="fn">Robbie Trencheny</li>
-      <li class="tel">9258843728</li>
+      <li class="tel">+1-925-884-3728</li>
+      <span class="adr">
+      <li class="street-address">100 Grand Avenue, Apt 1212</li>
       <li class="locality">Oakland</li>
       <li class="region">California</li>
       <li class="country-name">United States</li>
+      <li class="postal-code">94612</li>
+      </span>
       <li><a class="email" href="mailto:me@robbiet.us">me@robbiet.us</a></li>
       <li><a class="url" href="{{ site.url }}">{{ site.url }}</a></li>
       <li><a class="url" href="aim:goim?screenname=robbiet480">AIM</a></li>
       <li><a class="url" href="xmpp:robbie.trencheny@gmail.com">Jabber</a></li>
   </ul>
+  <!-- Disqus code for X replies link -->
   <script type="text/javascript">
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
       var disqus_shortname = '{{ site.disqus_username }}'; // required: replace example with your forum shortname

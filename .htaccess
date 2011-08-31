@@ -28,7 +28,7 @@ SetOutputFilter DEFLATE
 AddOutputFilterByType DEFLATE text/html application/xml text/css text/javascript 
 
 # Pretty error page
-ErrorDocument 404 http://robbie.io/404-not-found/
+ErrorDocument 404 http://robbie.io/404-not-found.html
 
 # Mime types
 AddType application/x-woff woff
