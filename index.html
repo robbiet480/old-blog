@@ -7,8 +7,11 @@ title: robbie.io
   <time datetime="{{ site.posts.first.date | xmlschema }}">{{ site.posts.first.date | date: "%d %B" }}</time>
   <h2><a class="post_title" href="{{ site.posts.first.url }}">{{ site.posts.first.title }}</a></h2>
   {{ site.posts.first.content }}
+  {% if site.posts.first.social %}
+  <fb:like href="{{ site.url }}{{ site.posts.first.url }}" send="true" layout="button_count" width="450" show_faces="true" colorscheme="dark" font="lucida grande"></fb:like>
+  <span style="float:right;"><a href="http://twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ site.posts.first.url }}" data-text="{{ site.posts.first.title }} -" data-count="none" data-via="{{ site.twitter_name }}">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></span>
+  {% endif %}
 </article>
-
 <hr>
 <h2>Archive</h2>
 <ol id="archive">

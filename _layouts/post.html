@@ -6,6 +6,31 @@ layout: default
   <h2>{{ page.title }}</h2>
   {{ content }}
 </article>
+{% if page.social %}
+<fb:like href="{{ site.url }}{{ page.url }}" send="true" layout="button_count" width="450" show_faces="true" colorscheme="dark" font="lucida grande"></fb:like>
+<span style="float:right;"><a href="http://twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ page.url }}" data-text="{{ page.title }} -" data-count="none" data-via="{{ site.twitter_name }}">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></span>
+{% endif %}
+
+<hr>
+{% if page.comments %}
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = '{{ site.disqus_username }}';
+    var disqus_url = '{{ site.url }}{{ page.url }}';
+    var disqus_identifier = '{{ page.date | date_to_xmlschema }}';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+{% else %}
+<p>Sorry, comments are disabled for this entry</p>
+{% endif %}
 <hr>
 <h2>Archive</h2>
 <ol id="archive">

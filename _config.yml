@@ -2,3 +2,8 @@ markdown: rdiscount
 pygments: true
 permalink:  /:year/:month/:title/
 url: http://robbie.io
+embedly:
+  api_key: 0b2d3820d15711e0b6354040d3dc5c07
+disqus_username: robbietrencheny
+twitter_name: Robbie
+facebook_uid: 503141088

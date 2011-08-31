@@ -12,7 +12,6 @@ padding: 0;
 }
 
 html, body {
-height: 100%;
 }
 
 body {
@@ -52,6 +51,9 @@ font-size: inherit;
 font: 100%;
 }
 
+article {
+}
+
 article time {
 display: block;
 margin-top: 2.5em;
@@ -78,6 +80,9 @@ border-left: none;
 border-right: none;
 }
 
+footer {
+  padding-bottom:5px;
+}
 
 /*****************************************************************************/
 /*
@@ -142,33 +147,6 @@ color: #B3B3B3;
 
   .site .meta {
 color: #aaa;
-}
-
-  .site .footer {
-font-size: 80%;
-color: #666;
-border-top: 4px solid #eee;
-margin-top: 2em;
-overflow: hidden;
-}
-
-    .site .footer .contact {
-float: left;
-margin-right: 3em;
-}
-
-      .site .footer .contact a {
-color: #8085C1;
-}
-
-    .site .footer .rss {
-margin-top: 1.1em;
-margin-right: -.2em;
-float: right;
-}
-
-      .site .footer .rss img {
-border: 0;
 }
 
 ul.vcard {
@@ -313,10 +291,6 @@ padding: 10px 0 3px
 float: left;
 margin: 0 10px 0 15px;
 -webkit-transition: margin-left 0.25s linear;
-}
-
-#networks li a:hover img {
-margin-left: 10px;
 }
 
 #networks li a strong {

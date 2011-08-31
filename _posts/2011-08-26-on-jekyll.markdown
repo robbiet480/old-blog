@@ -1,6 +1,8 @@
 ---
 layout: post
 title: On Jekyll
+comments: true
+social: true
 ---
 
 Well, Tumblr wasn't working out for me. It felt too... immature. I was flooded with reblogs and followers and all that other crap. So, I did what I threatened to do and switched robbie.io to [Jekyll](https://github.com/mojombo/jekyll). I have been sitting here the last hour or so and built a nice theme which is a combination of [Tom Preston-Werner](https://github.com/mojombo/mojombo.github.com) and [Tate Johnson](https://github.com/tatey/tatey.com) with a little bit of the old Tumblr theme mixed in.
