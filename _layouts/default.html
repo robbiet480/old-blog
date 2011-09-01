@@ -1,5 +1,11 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<!DOCTYPE html
+          PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">  
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:og="http://ogp.me/ns#" 
+      xmlns:fb="https://www.facebook.com/2008/fbml" 
+      xmlns:hcard="http://www.w3.org/2006/03/hcard"> 
+
 <head>
    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
    <title>{{ page.title }}</title>
@@ -8,11 +14,11 @@
    <link href="{{ site.url }}/atom.xml" rel="alternate" title="Robbie Trencheny" type="application/atom+xml" />
 
    <!-- CSS -->
-   <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen, projection" />
+   <link rel="stylesheet" href="http://robbieio.s3.amazonaws.com/css/style.css" type="text/css" media="screen, projection" />
 
    <!-- favicons -->
-   <link rel="shortcut icon" type="image/x-icon" href="/images/new_rt.png" />
-   <link rel="icon" type="image/x-icon" href="/images/new_rt.png" />
+   <link rel="shortcut icon" type="image/x-icon" href="http://robbieio.s3.amazonaws.com/images/new_rt.png" />
+   <link rel="icon" type="image/x-icon" href="http://robbieio.s3.amazonaws.com/images/new_rt.png" />
 
    <!-- Open Graph -->
    <meta property="og:title" content="{{ page.title }}" />
@@ -20,129 +26,40 @@
    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
    <meta property="og:site_name" content="robbie.io" />
    <meta property="og:description" content="Robbie Trencheny's main braindumping ground for writing" />
-   <meta property="og:image" content="{{ site.url }}/images/new_rt.png" />
+   <meta property="og:image" content="http://robbieio.s3.amazonaws.com/images/new_rt.png" />
+   <meta property="og:street-address" content="100 Grand Avenue, Apt 1212" />
+   <meta property="og:locality" content="Oakland" />
+   <meta property="og:region" content="CA" />
+   <meta property="og:postal-code" content="94612" />
+   <meta property="og:country-name" content="USA" />
+   <meta property="og:email" content="me@robbiet.us" />
+   <meta property="og:phone_number" content="+1-925-884-3728" />
    
    <!-- Facebook -->
-   <meta property="fb:admins" content="{{ site.facebook_uid }}" />
+   <meta property="fb:admins" content="{{ site.facebook_uid }}" name="fb:admins"/>
    
    <!-- SEO -->
-   <meta name="keywords" content="robbie trencheny, robbie, trencheny, mac, apple, startup, video chat, video, music, electronic, hacking, hackerspaces, oakland, california, oakland california, bay area, nerd, geek, teen">
-   <meta name="description" content="Robbie Trencheny's main dumping ground for writing">
-   <meta name="author" content="Robbie Trencheny">
-   <meta name="robots" content="all">
-   <meta name="copyright" content="© 2011 Robbie Trencheny">
+   <meta name="keywords" content="robbie trencheny, robbie, trencheny, mac, apple, startup, video chat, video, music, electronic, hacking, hackerspaces, oakland, california, oakland california, bay area, nerd, geek, teen" />
+   <meta name="description" content="Robbie Trencheny's main dumping ground for writing" />
+   <meta name="author" content="Robbie Trencheny" />
+   <meta name="robots" content="all" />
+   <meta name="copyright" content="© 2011 Robbie Trencheny" />
 
    <!-- iPhone -->
    <meta name="apple-mobile-web-app-capable" content="yes" />
    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-   <meta name="viewport" content = "width = device-width, initial-scale = 0.5, maximum-scale = 5" />
+   <meta name="viewport" content="width = device-width, initial-scale = 0.5, maximum-scale = 5" />
    <link rel="apple-touch-icon-precomposed" href="{{ site.url }}/images/new_rt.png"/>
    
    <!-- Microformats -->
-   <link rel="me" type="text/html" href="http://robbie.io">
+   <link rel="me" type="text/html" href="http://robbie.io" />
    <link rel="me twitter" type="text/html" href="http://twitter.com/robbie" /> 
    <link rel="me blog" type="text/html" href="http://robbie.io" /> 
    
    <!-- jQuery and externals -->
-   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-   <script type="text/javascript" src="https://raw.github.com/christianv/jquery-lifestream/master/jquery.lifestream.min.js"></script>
-   <script type="text/javascript" src="http://fgnass.github.com/spin.js/spin.min.js"></script>
-   <script type="text/javascript" src="https://raw.github.com/madrobby/keymaster/master/keymaster.min.js"></script>
-   <script type="text/javascript" src="http://konami-js.googlecode.com/svn/trunk/konami.js"></script>
-   <script type="text/javascript" src="http://connect.facebook.net/en_US/all.js"></script>
-
-   <script type="text/javascript">
-    FB.init({
-        xfbml  : true, // parse XFBML
-        channelUrl : '{{ site.url }}/channel.html' // channel.html file
-      });
-    
-      if( navigator.userAgent.match(/iPhone/i) || 
-            navigator.userAgent.match(/iPod/i) || 
-            navigator.userAgent.match(/iPad/i)
-          ) {
-               document.title = "{{ site.url }}";
-            }
-    
-    $(document).ready(function() {
-      var opts = {
-        lines: 12, // The number of lines to draw
-        length: 7, // The length of each line
-        width: 5, // The line thickness
-        radius: 10, // The radius of the inner circle
-        color: '#fff', // #rbg or #rrggbb
-        speed: 1, // Rounds per second
-        trail: 100, // Afterglow percentage
-        shadow: false // Whether to render a shadow
-      };
-      var target = document.getElementById('lifestream');
-      var spinner = new Spinner(opts).spin(target);
-           $("#lifestream").lifestream({
-               limit: 20,
-               feedloaded: feedcallback,
-                list:[
-                  {
-                    service: "github",
-                    user: "robbiet480"
-                  },
-                  {
-                    service: "twitter",
-                    user: "robbie"
-                  },
-                  {
-                    service: "lastfm",
-                    user: "robbiet480"
-                  },
-                  {
-                    service: "foursquare",
-                    user: "BZRYSLNWCDV1MYFYSY2V2KLNDRD2VRRC",
-                    template: {
-                      checkedin: 'I checked in at <a href="${link}">${title}</a>'
-                    }
-                  },
-                  {
-                    service: "reddit",
-                    user: "robbiet480"
-                  },
-                  {
-                    service: "stackoverflow",
-                    user: "486182"
-                  }
-                ]
-              });     
-       });
-     function feedcallback() {
-       $('#lifestream').css('padding-bottom','0px');
-       var spinner = new Spinner().stop();
-     }
-
-
-     var _gaq = _gaq || [];
-     _gaq.push(['_setAccount', 'UA-25380159-1']);
-     _gaq.push(['_trackPageview']);
-
-     (function() {
-       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-     })();
-     
-     //Home
-     key('h', function(){ window.location = '/' });
-     //About
-     key('o', function(){ window.location = '/about.html' });
-     //Lifestream
-     key('l', function(){ window.location = '/life.html' });
-     //Contact
-     key('c', function(){ window.location = '/contact.html' });
-     
-     //Konami
-     konami = new Konami()
-     konami.load("http://nyan.cat/");
-     </script>
+   <script type="text/javascript" src="http://robbieio.s3.amazonaws.com/js/script.min.js"></script>
 </head>
 <body>
-
 <div class="site">
   <!-- Header -->
   <div class="title">
@@ -155,7 +72,7 @@
   
   {{ content }}
   
-  <hr>
+  <hr/>
   <!-- Footer -->
   <footer>
     <p>
@@ -166,13 +83,13 @@
   <ul class="vcard">
       <li class="fn">Robbie Trencheny</li>
       <li class="tel">+1-925-884-3728</li>
-      <span class="adr">
+      <li class="adr">
       <li class="street-address">100 Grand Avenue, Apt 1212</li>
       <li class="locality">Oakland</li>
       <li class="region">California</li>
       <li class="country-name">United States</li>
       <li class="postal-code">94612</li>
-      </span>
+      </li>
       <li><a class="email" href="mailto:me@robbiet.us">me@robbiet.us</a></li>
       <li><a class="url" href="{{ site.url }}">{{ site.url }}</a></li>
       <li><a class="url" href="aim:goim?screenname=robbiet480">AIM</a></li>
@@ -191,5 +108,6 @@
           (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
       }());
   </script>
+</div>
 </body>
 </html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Directions Example</title> 
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script> 
+  <script type="text/javascript"> 
+  //Ask for HTML5 geolocation, use Modernizr to detect if we can even do it. If allow, go to show_map, if deny go to handle_error. Please note the High Accuracy flag, which may cause the location fix to take longer, but it gives a more precise reading
+   function get_location() {
+     if (Modernizr.geolocation) {
+       navigator.geolocation.getCurrentPosition(show_map, handle_error, {maximumAge: 75000, enableHighAccuracy: true});
+       console.log('We have location support!');
+     } else {
+       console.error('No HTML5 Geolocation support! Unable to divine current location!');
+     }
+   }
+   
+   //Handle denied
+   function handle_error(err) {
+     if (err.code == 1) {
+       console.error('HTML5 Geolocation Error: Permission denied (code 1)');
+     }
+     if (err.code == 0) {
+       console.error('HTML5 Geolocation Error: Unknown error (code 0)');
+     }
+     if (err.code == 2) {
+       console.error('HTML5 Geolocation Error: Position unavailable. Network is down or positioning satellites can\'t be contacted! (code 2)');
+     }
+     if (err.code == 3) {
+       console.error('HTML5 Geolocation Error: Timed out (code 3)');
+     }
+     var my_address = "1600 Pennsylvania Ave NW, Washington, DC 20500";
+     window.location = 'http://maps.google.com/maps?daddr='+encodeURIComponent(my_address);
+   }
+   
+   function show_map(position) {
+     console.log('Sending to Google Maps');
+     var latitude = position.coords.latitude;
+     var longitude = position.coords.longitude;
+     var my_address = "1600 Pennsylvania Ave NW, Washington, DC 20500";
+     window.location = 'http://maps.google.com/maps?saddr='+latitude+', '+longitude+'&daddr='+encodeURIComponent(my_address);
+   }
+  </script> 
+</head> 
+<body> 
+  <a href="#" onClick="get_location();">Get directions to my house!</a> 
+</body> 
+</html>

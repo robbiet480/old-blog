@@ -11,8 +11,9 @@ title: robbie.io
   <h2><a class="post_title" href="{{ site.posts.first.url }}">{{ site.posts.first.title }}</a></h2>
   <!-- First post content -->
   {{ site.posts.first.content }}
-  <!-- First post social -->
   {% if site.posts.first.social %}
+  <span id="social">
+  <!-- First post social -->
   <!-- First post Facebook button -->
   <fb:like href="{{ site.url }}{{ site.posts.first.url }}" send="true" layout="button_count" width="450" show_faces="true" colorscheme="dark" font="lucida grande"></fb:like>
   <!-- First post comment count -->
@@ -20,12 +21,14 @@ title: robbie.io
   <a href="{{ site.posts.first.url }}#disqus_thread" data-disqus-identifier="{{ page.date | date_to_xmlschema }}"></a>
   {% endif %}
   <!-- First post Tweet Button -->
-  <span style="float:right;"><a href="http://twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ site.posts.first.url }}" data-text="{{ site.posts.first.title }} -" data-count="none" data-via="{{ site.twitter_name }}">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></span>
+  <span style="float:right;">
+    <a href="http://twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ site.posts.first.url }}" data-text="{{ site.posts.first.title }} -" data-count="none" data-via="{{ site.twitter_name }}">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></span>
+  </span>
   {% endif %}
-  <br>
+  <br/>
 </article>
 <!-- End first post -->
-<hr>
+<hr/>
 <!-- Old posts -->
 <h2>Archive</h2>
 <ol id="archive">

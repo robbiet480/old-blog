@@ -20,6 +20,7 @@ Everything in this repository is automatically transformed by [Jekyll](http://gi
   * [keymaster.js](https://github.com/madrobby/keymaster)
   * [Konami-JS](http://snaptortoise.com/konami-js/)
   * Hidden [hCard](http://microformats.org/wiki/hcard)
+  * [Modernizr](http://www.modernizr.com/)
 * Plugins
   * [jekyll-embedly-client](https://github.com/robb/jekyll-embedly-client)
   * [archive.rb, blockquote.rb, helpers.rb, pygments\_cache\_patch.rb, generate\_sitemap.rb](https://github.com/josegonzalez/josediazgonzalez.com/tree/master/_plugins)
@@ -29,12 +30,14 @@ Everything in this repository is automatically transformed by [Jekyll](http://gi
 
 # Notes
 * The syntax of most if not all pages right now is not W3C valid (HTML and CSS). I am planning to fix this at a later date.
+  * I tried to get it to validate however due to the Open Graph and hCard stuff, it fails to validate, mostly having to do with the meta tags (og: and fb:). Yes, I tried adding namespaces for each, to no avail. If you have a fix, please let me know!
 * If you are planning to fork this blog, please note a few settings:
   * You can set comments: true on any post in the top settings to show comments
   * You can also set social: true to show Facebook Like/Send buttons and the Tweet button
   * This blog is category enabled, set category: SOMETHING in a post header
   * Make sure to change the URL from robbie.io to your own in the following places: _config.yml, .htaccess and most of the HTML pages
   * Change the hCard at the bottom of default.html to your own
+  * Change your address in the Javascript variable my\_address
 * You may find this useful. Copy paste it into your ~/.bashrc or ~/.bash\_profile and run update\_blog 
   * `alias update_blog='git add . && git commit -a && git push && jekyll && rsync -avz --delete _site/ USERNAME@DOMAIN:/var/www/DOMAIN/'`
 
@@ -44,6 +47,7 @@ Everything in this repository is automatically transformed by [Jekyll](http://gi
 * [Tate Johnson](http://tatey.com) for his wonderful [theme](https://github.com/tatey/tatey.com).
 * [Paul Robert Lloyd](http://paulrobertlloyd.com/2009/06/social_media_icons/) for his [beautiful Social Media Icons](http://paulrobertlloyd.com/2009/06/social_media_icons/)
 * [Tim Van Damme](http://timvandamme.com/) for [a bit of inspiration](http://timvandamme.com/#networks) for my About page.
+* [Dive Into HTML5] for the [Geolocation help](http://diveintohtml5.org/geolocation.html)
 
 
 # License

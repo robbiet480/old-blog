@@ -9,16 +9,19 @@ layout: default
   <!-- Post content -->
   {{ content }}
 </article>
+{% if page.category %}
 <!-- Categories -->
-Posted in: <a href="/categories/{{ page.category }}/">{{ page.category }}</a><br>
-<!-- Social buttons -->
-{% if page.social %}
-<fb:like href="{{ site.url }}{{ page.url }}" send="true" layout="button_count" width="450" show_faces="true" colorscheme="dark" font="lucida grande"></fb:like>
-<span style="float:right;"><a href="http://twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ page.url }}" data-text="{{ page.title }} -" data-count="none" data-via="{{ site.twitter_name }}">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></span>
+Posted in: <a href="/categories/{{ page.category }}/">{{ page.category }}</a><br/>
 {% endif %}
-<hr>
-<!-- Post comments -->
+{% if page.social %}
+<!-- Social buttons -->
+<fb:like href="{{ site.url }}{{ page.url }}" send="true" layout="button_count" width="450" show_faces="true" colorscheme="dark" font="lucida grande"></fb:like>
+<span style="float:right;">
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ page.url }}" data-text="{{ page.title }} -" data-count="none" data-via="{{ site.twitter_name }}">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></span>
+{% endif %}
+<hr/>
 {% if page.comments %}
+<!-- Post comments -->
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = '{{ site.disqus_username }}';
@@ -37,7 +40,7 @@ Posted in: <a href="/categories/{{ page.category }}/">{{ page.category }}</a><br
 {% else %}
 <p>Sorry, comments are disabled for this entry</p>
 {% endif %}
-<hr>
+<hr/>
 <!-- Past posts -->
 <h2>Archive</h2>
 <ol id="archive">
