@@ -46,7 +46,7 @@ Everything in this repository is automatically transformed by [Jekyll](http://gi
 * [Tate Johnson](http://tatey.com) for his wonderful [theme](https://github.com/tatey/tatey.com).
 * [Paul Robert Lloyd](http://paulrobertlloyd.com/2009/06/social_media_icons/) for his [beautiful Social Media Icons](http://paulrobertlloyd.com/2009/06/social_media_icons/)
 * [Tim Van Damme](http://timvandamme.com/) for [a bit of inspiration](http://timvandamme.com/#networks) for my About page.
-* [Dive Into HTML5] for the [Geolocation help](http://diveintohtml5.org/geolocation.html)
+* [Dive Into HTML5](http://diveintohtml5.org/) for the [Geolocation help](http://diveintohtml5.org/geolocation.html)
 
 
 # License
