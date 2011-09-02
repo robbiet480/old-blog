@@ -1,13 +1,11 @@
-<!DOCTYPE html
-          PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">  
+<!DOCTYPE html> 
 <html xmlns="http://www.w3.org/1999/xhtml" 
       xmlns:og="http://ogp.me/ns#" 
       xmlns:fb="https://www.facebook.com/2008/fbml" 
       xmlns:hcard="http://www.w3.org/2006/03/hcard"> 
 
 <head>
-   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta charset="UTF-8" />
    <title>{{ page.title }}</title>
    
    <!-- Atom Feed -->
@@ -20,7 +18,7 @@
    <link rel="shortcut icon" type="image/x-icon" href="http://robbieio.s3.amazonaws.com/images/new_rt.png" />
    <link rel="icon" type="image/x-icon" href="http://robbieio.s3.amazonaws.com/images/new_rt.png" />
 
-   <!-- Open Graph -->
+   <!-- Open Graph (wrap in comments so W3C bypasses) 
    <meta property="og:title" content="{{ page.title }}" />
    <meta property="og:type" content="blog" />
    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
@@ -34,27 +32,22 @@
    <meta property="og:country-name" content="USA" />
    <meta property="og:email" content="me@robbiet.us" />
    <meta property="og:phone_number" content="+1-925-884-3728" />
-   
-   <!-- Facebook -->
+   -->
+   <!-- Facebook
    <meta property="fb:admins" content="{{ site.facebook_uid }}" name="fb:admins"/>
+    -->
    
    <!-- SEO -->
    <meta name="keywords" content="robbie trencheny, robbie, trencheny, mac, apple, startup, video chat, video, music, electronic, hacking, hackerspaces, oakland, california, oakland california, bay area, nerd, geek, teen" />
    <meta name="description" content="Robbie Trencheny's main dumping ground for writing" />
    <meta name="author" content="Robbie Trencheny" />
    <meta name="robots" content="all" />
-   <meta name="copyright" content="© 2011 Robbie Trencheny" />
 
    <!-- iPhone -->
    <meta name="apple-mobile-web-app-capable" content="yes" />
    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
    <meta name="viewport" content="width = device-width, initial-scale = 0.5, maximum-scale = 5" />
    <link rel="apple-touch-icon-precomposed" href="{{ site.url }}/images/new_rt.png"/>
-   
-   <!-- Microformats -->
-   <link rel="me" type="text/html" href="http://robbie.io" />
-   <link rel="me twitter" type="text/html" href="http://twitter.com/robbie" /> 
-   <link rel="me blog" type="text/html" href="http://robbie.io" /> 
    
    <!-- jQuery and externals -->
    <script type="text/javascript" src="http://robbieio.s3.amazonaws.com/js/script.min.js"></script>
@@ -74,27 +67,31 @@
   
   <hr/>
   <!-- Footer -->
-  <footer>
+  <div id="footer">
     <p>
       <a href="{{ base.url }}/about.html">Robbie Trencheny</a> is a 19 year old web developer and startup <a href="http://sutterstudios.com">founder</a> living in Oakland, California. You can follow me on <a href="http://twitter.com/robbie">Twitter</a>, hear what I listen to on <a href="http://last.fm/user/robbiet480/">Last.fm</a> or fork my code on <a href="http://github.com/robbiet480">GitHub</a>. If you want you can even <a href="tel:+19258843728">call</a> me.
     </p>
-  </footer>
+  </div>
   <!-- hCard -->
-  <ul class="vcard">
-      <li class="fn">Robbie Trencheny</li>
-      <li class="tel">+1-925-884-3728</li>
-      <li class="adr">
-      <li class="street-address">100 Grand Avenue, Apt 1212</li>
-      <li class="locality">Oakland</li>
-      <li class="region">California</li>
-      <li class="country-name">United States</li>
-      <li class="postal-code">94612</li>
-      </li>
-      <li><a class="email" href="mailto:me@robbiet.us">me@robbiet.us</a></li>
-      <li><a class="url" href="{{ site.url }}">{{ site.url }}</a></li>
-      <li><a class="url" href="aim:goim?screenname=robbiet480">AIM</a></li>
-      <li><a class="url" href="xmpp:robbie.trencheny@gmail.com">Jabber</a></li>
-  </ul>
+  <div id="hcard-Robert-Xavier-Trencheny" class="vcard">
+    <img style="float:left; margin-right:4px" src="http://robbieio.s3.amazonaws.com/images/new_rt.png" alt="photo of Robert" class="photo"/>
+   <a class="url fn n" href="http://robbie.io">  <span class="given-name">Robert</span>
+    <span class="additional-name">Xavier</span>
+    <span class="family-name">Trencheny</span>
+  </a>
+   <div class="org">Sutter Studios, Inc.</div>
+   <a class="email" href="mailto:me@robbiet.us">me@robbiet.us</a>
+   <div class="adr">
+    <div class="street-address">100 Grand Avenue, Apt 1212</div>
+    <span class="locality">Oakland</span>
+    <span class="region">California</span>
+    <span class="postal-code">94612</span>
+    <span class="country-name">United States Of America</span>
+   </div>
+   <div class="tel">+1-925-884-3728</div>
+   <a class="url" href="aim:goim?screenname=robbiet480">AIM</a>
+   <a class="url" href="xmpp:robbie.trencheny@gmail.com">Jabber</a>
+ </div>
   <!-- Disqus code for X replies link -->
   <script type="text/javascript">
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */

@@ -29,9 +29,8 @@ Everything in this repository is automatically transformed by [Jekyll](http://gi
   * Pygments
 
 # Notes
-* The syntax of most if not all pages right now is not W3C valid (HTML and CSS). I am planning to fix this at a later date.
-  * I tried to get it to validate however due to the Open Graph and hCard stuff, it fails to validate, mostly having to do with the meta tags (og: and fb:). Yes, I tried adding namespaces for each, to no avail. If you have a fix, please let me know!
-* If you are planning to fork this blog, please note a few settings:
+* The syntax of all pages is W3C valid (HTML and CSS).
+* If you are planning to fork this blog, please note a few things:
   * You can set comments: true on any post in the top settings to show comments
   * You can also set social: true to show Facebook Like/Send buttons and the Tweet button
   * This blog is category enabled, set category: SOMETHING in a post header
