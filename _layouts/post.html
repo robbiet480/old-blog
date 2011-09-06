@@ -1,17 +1,23 @@
 ---
 layout: default
 ---
-<article>
+<article class="hentry">
   <!-- Post datetime -->
-  <time datetime="{{ page.date | date: '%Y-%m-%dT%H:%M:%S-08:00' }}">{{ page.date | date: "%d %B, %Y" }}</time>
+  <time class="updated" datetime="{{ page.date | date: '%Y-%m-%dT%H:%M:%S-08:00' }}" pubdate>{{ page.date | date: "%d %B, %Y" }}</time>
   <!-- Post title -->
-  <h2>{{ page.title }}</h2>
+  <h2 class="entry-title">{{ page.title }}</h2>
+  <!-- hNews Byline -->
+  <span class="byline author vcard">
+    By <span class="fn">Robbie Trencheny</span>
+  </span>
   <!-- Post content -->
+  <span class="entry-content">
   {{ content }}
+  </span>
 </article>
 {% if page.category %}
 <!-- Categories -->
-Posted in: <a href="/categories/{{ page.category }}/">{{ page.category }}</a><br/>
+<p>Posted in: <a href="/categories/{{ page.category }}/">{{ page.category }}</a></p><br/>
 {% endif %}
 {% if page.social %}
 <!-- Social buttons -->
@@ -22,6 +28,9 @@ document.write('<fb:like href="{{ site.url }}{{ page.url }}" send="true" layout=
 </script>
 <span style="float:right;">
   <a href="http://twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ page.url }}" data-text="{{ page.title }} -" data-count="none" data-via="{{ site.twitter_name }}">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></span>
+{% endif %}
+{% if page.readability %}
+<div style="margin-left: -5px;margin-bottom:-15px;" class="rdbWrapper" data-show-read="1" data-show-send-to-kindle="1" data-show-print="0" data-show-email="0" data-orientation="0" data-version="1" data-bg-color="#222222" data-text-color="#ffffff"></div><script type="text/javascript">(function() {var s = document.getElementsByTagName("script")[0],rdb = document.createElement("script"); rdb.type = "text/javascript"; rdb.async = true; rdb.src = document.location.protocol + "//www.readability.com/embed.js"; s.parentNode.insertBefore(rdb, s); })();</script>
 {% endif %}
 <hr/>
 {% if page.comments %}

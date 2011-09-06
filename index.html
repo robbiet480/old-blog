@@ -4,13 +4,15 @@ title: robbie.io
 ---
 <div id="home">
 <!-- Begin first post -->
-<article>
+<article class="hentry">
   <!-- First post datetime -->
   <time datetime="{{ site.posts.first.date | date: '%Y-%m-%dT%H:%M:%S-08:00' }}">{{ site.posts.first.date | date: "%d %B" }}</time>
   <!-- First post title -->
-  <h2><a class="post_title" href="{{ site.posts.first.url }}">{{ site.posts.first.title }}</a></h2>
+  <h2 class="entry-title"><a class="post_title" href="{{ site.posts.first.url }}">{{ site.posts.first.title }}</a></h2>
   <!-- First post content -->
+  <span class="entry-content">
   {{ site.posts.first.content }}
+  </span>
   {% if site.posts.first.social %}
   <span id="social">
   <!-- First post social -->
