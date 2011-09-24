@@ -4,8 +4,7 @@
       xmlns:fb="https://www.facebook.com/2008/fbml" 
       xmlns:hcard="http://www.w3.org/2006/03/hcard"> 
 
-<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# 
-                robbieio: http://ogp.me/ns/apps/robbieio#">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# blog: http://ogp.me/ns/blog#">
    <meta charset="UTF-8" />
    <title>{{ page.title }}</title>
    <!-- Atom Feed -->
@@ -19,11 +18,17 @@
    <link rel="icon" type="image/x-icon" href="http://robbieio.s3.amazonaws.com/images/new_rt.png" />
 
    <!-- Open Graph -->
-   <meta property="og:type"                             content="blog"> 
-   <meta property="og:url"                              content="{{ site.url }}"> 
-   <meta property="og:image"                            content="http://robbieio.s3.amazonaws.com/images/new_rt.png">
-   <meta property="og:title"                            content="robbie.io">
-   <meta property="og:description"                      content="robbie trencheny's main dumping ground for writing"> 
+   <meta property="og:type"                             content="article" />
+   <meta property="og:url"                              content="{{ site.url }}{{ page.url }}" />
+   <meta property="og:site_name"                        content="robbie.io" />
+   <meta property="og:description"                      content="{{ page.title }}, an article from robbie.io" />
+   <meta property="og:image"                            content="http://robbieio.s3.amazonaws.com/images/new_rt.png" />
+   <meta property="og:title"                            content="{{ page.title }}">
+   <meta property="article:published_time"              content="{{ page.date }}"> 
+   <meta property="article:modified_time"               content="{{ page.date }}"> 
+   <meta property="article:expiration_time"             content="{{ page.date }}">
+   <meta property="article:author"                      content="{{ site.url }}/about.html">
+   <meta property="article:tag"                         content="{{ page.category }}">
    <meta property="robbieio:owner:street_address"       content="100 Grand Avenue, Apt 1212"> 
    <meta property="robbieio:owner:locality"             content="Oakland"> 
    <meta property="robbieio:owner:region"               content="California"> 
@@ -49,7 +54,7 @@
    <meta name="apple-mobile-web-app-capable"            content="yes" />
    <meta name="apple-mobile-web-app-status-bar-style"   content="black-translucent" />
    <meta name="viewport"                                content="width = device-width, initial-scale = 0.5, maximum-scale = 5" />
-   <link rel="apple-touch-icon-precomposed" href="{{ site.url }}/images/new_rt.png"/>
+   <link rel="apple-touch-icon-precomposed"             href="{{ site.url }}/images/new_rt.png"/>
    
    <!-- jQuery and externals -->
    <script type="text/javascript" src="http://robbieio.s3.amazonaws.com/js/script.min.js"></script>

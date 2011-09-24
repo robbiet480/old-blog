@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post_layout
 ---
 <article class="hentry">
   <!-- Post datetime -->
@@ -11,9 +11,9 @@ layout: default
     By <span class="fn">Robbie Trencheny</span>
   </span>
   <!-- Post content -->
-  <span class="entry-content">
+  <div class="entry-content">
   {{ content }}
-  </span>
+  </div>
 </article>
 {% if page.category %}
 <!-- Categories -->
@@ -21,17 +21,22 @@ layout: default
 {% endif %}
 {% if page.social %}
 <!-- Social buttons -->
-<script type="text/javascript">
-//<![CDATA[
-document.write('<fb:like href="{{ site.url }}{{ page.url }}" send="true" layout="button_count" width="450" show_faces="true" colorscheme="dark" font="lucida grande"></fb:like>');
-//]]>
-</script>
-<span style="float:right;">
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ page.url }}" data-text="{{ page.title }} -" data-count="none" data-via="{{ site.twitter_name }}">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></span>
+<div class="fb-like" data-href="{{ site.url }}{{ page.url }}" data-send="true" data-layout="button_count" data-width="225" data-show-faces="false" data-colorscheme="dark" data-font="lucida grande"></div>
+  <!-- First post Tweet Button -->
+  <span style="float:right;margin-top:-25px;">
+    <a href="http://twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ page.url }}" data-text="{{ page.title }} -" data-count="none" data-via="{{ site.twitter_name }}">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+  </span>
 {% endif %}
 {% if page.readability %}
 <div style="margin-left: -5px;margin-bottom:-15px;" class="rdbWrapper" data-show-read="1" data-show-send-to-kindle="1" data-show-print="0" data-show-email="0" data-orientation="0" data-version="1" data-bg-color="#222222" data-text-color="#ffffff"></div><script type="text/javascript">(function() {var s = document.getElementsByTagName("script")[0],rdb = document.createElement("script"); rdb.type = "text/javascript"; rdb.async = true; rdb.src = document.location.protocol + "//www.readability.com/embed.js"; s.parentNode.insertBefore(rdb, s); })();</script>
 {% endif %}
+<span style="float:right;margin-top:-15px;">
+<iframe border="0" scrolling="no" width="78" height="17" allowtransparency="true" frameborder="0"
+ style="margin-bottom: -3px; z-index: 1338; border: 0px; background-color: transparent; overflow: hidden;"
+ src="http://www.instapaper.com/e2?url={{site.url}}{{page.url}}&title={{page.title | cgi_escape}}"
+></iframe>
+</span>
+<br/>
 <hr/>
 {% if page.comments %}
 <!-- Post comments -->

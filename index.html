@@ -17,14 +17,10 @@ title: robbie.io
   <span id="social">
   <!-- First post social -->
   <!-- First post Facebook button -->
-  <script type="text/javascript">
-  //<![CDATA[
-  document.write('<fb:like href="{{ site.url }}{{ site.posts.first.url }}" send="true" layout="button_count" width="450" show_faces="true" colorscheme="dark" font="lucida grande"></fb:like>');
-  //]]>
-  </script>
+  <div class="fb-like" data-href="{{ site.url }}{{ site.posts.first.url }}" data-send="true" data-layout="button_count" data-width="450" data-show-faces="false" data-colorscheme="dark" data-font="lucida grande"></div>
   <!-- First post comment count -->
   {% if site.posts.first.comments %}
-  <a href="{{ site.posts.first.url }}#disqus_thread" data-disqus-identifier="{{ page.date | date_to_xmlschema }}"></a>
+  <a href="{{ site.posts.first.url }}#disqus_thread" data-disqus-identifier="{{ site.posts.first.date | date_to_xmlschema }}"></a>
   {% endif %}
   <!-- First post Tweet Button -->
   <span style="float:right;">
