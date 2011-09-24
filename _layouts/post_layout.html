@@ -24,9 +24,9 @@
    <meta property="og:description"                      content="{{ page.title }}, an article from robbie.io" />
    <meta property="og:image"                            content="http://robbieio.s3.amazonaws.com/images/new_rt.png" />
    <meta property="og:title"                            content="{{ page.title }}">
-   <meta property="article:published_time"              content="{{ page.date | date_to_long_string  }} "> 
-   <meta property="article:modified_time"               content="{{ page.date | date_to_long_string  }}"> 
-   <meta property="article:expiration_time"             content="{{ page.date | date_to_long_string  }}">
+   <meta property="article:published_time"              content="{{ page.date | date: "%m/%d/%Y" }}"> 
+   <meta property="article:modified_time"               content="{{ page.date | date: "%m/%d/%Y" }}"> 
+   <meta property="article:expiration_time"             content="{{ page.date | date: "%m/%d/%Y" }}">
    <meta property="article:author"                      content="{{ site.url }}/about.html">
    <meta property="article:tag"                         content="{{ page.category }}">
    <meta property="robbieio:owner:street_address"       content="100 Grand Avenue, Apt 1212"> 
