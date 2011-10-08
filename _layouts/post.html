@@ -17,8 +17,10 @@ layout: post_layout
 </article>
 {% if page.category %}
 <!-- Categories -->
-<p>Posted in: <a href="/categories/{{ page.category }}/">{{ page.category }}</a></p><br/>
+<p>Posted in: <a href="/categories/{{ page.category }}/">{{ page.category }}</a></p>
 {% endif %}
+<!-- Number of words -->
+<p>An entry of {{ page.content | number_of_words }} words</p><br/>
 {% if page.social %}
 <!-- Social buttons -->
 <div class="fb-like" data-href="{{ site.url }}{{ page.url }}" data-send="true" data-layout="button_count" data-width="225" data-show-faces="false" data-colorscheme="dark" data-font="lucida grande"></div>
