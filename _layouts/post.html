@@ -1,71 +1,71 @@
 ---
-layout: post_layout
+layout: default
 ---
-<article class="hentry">
-  <!-- Post datetime -->
-  <time class="updated" datetime="{{ page.date | date: '%Y-%m-%dT%H:%M:%S-08:00' }}" pubdate>{{ page.date | date: "%d %B, %Y" }}</time>
-  <!-- Post title -->
-  <h2 class="entry-title">{{ page.title }}</h2>
-  <!-- hNews Byline -->
-  <span class="byline author vcard">
-    By <span class="fn">Robbie Trencheny</span>
-  </span>
-  <!-- Post content -->
-  <div class="entry-content">
-  {{ content }}
-  </div>
-</article>
-{% if page.category %}
-<!-- Categories -->
-<p>Posted in: <a href="/categories/{{ page.category }}/">{{ page.category }}</a></p>
-{% endif %}
-<!-- Number of words -->
-<p>An entry of {{ page.content | number_of_words }} words</p><br/>
-{% if page.social %}
-<!-- Social buttons -->
-<div class="fb-like" data-href="{{ site.url }}{{ page.url }}" data-send="true" data-layout="button_count" data-width="225" data-show-faces="false" data-colorscheme="dark" data-font="lucida grande"></div>
-  <!-- First post Tweet Button -->
-  <span style="float:right;margin-top:-25px;">
-    <a href="http://twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ page.url }}" data-text="{{ page.title }} -" data-count="none" data-via="{{ site.twitter_name }}">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-  </span>
-{% endif %}
-{% if page.readability %}
-<div style="margin-left: -5px;margin-bottom:-15px;" class="rdbWrapper" data-show-read="1" data-show-send-to-kindle="1" data-show-print="0" data-show-email="0" data-orientation="0" data-version="1" data-bg-color="#222222" data-text-color="#ffffff"></div><script type="text/javascript">(function() {var s = document.getElementsByTagName("script")[0],rdb = document.createElement("script"); rdb.type = "text/javascript"; rdb.async = true; rdb.src = document.location.protocol + "//www.readability.com/embed.js"; s.parentNode.insertBefore(rdb, s); })();</script>
-{% endif %}
-<span style="float:right;margin-top:-15px;">
-<iframe border="0" scrolling="no" width="78" height="17" allowtransparency="true" frameborder="0"
- style="margin-bottom: -3px; z-index: 1338; border: 0px; background-color: transparent; overflow: hidden;"
- src="http://www.instapaper.com/e2?url={{site.url}}{{page.url}}&title={{page.title | cgi_escape}}"
-></iframe>
-</span>
-<br/>
-<hr/>
-{% if page.comments %}
-<!-- Post comments -->
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_shortname = '{{ site.disqus_username }}';
-    var disqus_url = '{{ site.url }}{{ page.url }}';
-    var disqus_identifier = '{{ page.date | date_to_xmlschema }}';
+<div class="row">
+	<div class="span12">
+		<article class="hentry">
+		  <div class="page-header">
+		  	<h1 class="entry-title"><a class="post_title" href="{{ page.url }}">{{ page.title }}</a> <small><time class="updated" datetime="{{ page.date | date: '%Y-%m-%dT%H:%M:%S-08:00' }}" pubdate>{{ page.date | date: "%d %B, %Y" }}</time></small></h1>
+		  </div>
+		  <!-- hNews Byline -->
+		  <span class="byline author vcard">
+		    By <span class="fn">Robbie Trencheny</span>
+		  </span>
+		  <!-- Post content -->
+		  <div class="entry-content">
+		  {{ content }}
+		  </div>
+		</article>
+		{% if page.category %}
+		<!-- Categories -->
+		<p>Posted in: <a href="/categories/{{ page.category }}/">{{ page.category }}</a></p>
+		{% endif %}
+		<!-- Number of words -->
+		<p>An entry of {{ page.content | number_of_words }} words</p><br/>
+		{% if page.social %}
+		<!-- Social buttons -->
+		<div class="row">
+			<div class="span6">
+				<div class="fb-like" data-href="{{ site.url }}{{ page.url }}" data-send="true" data-layout="button_count" data-width="225" data-show-faces="false" data-colorscheme="light" data-font="lucida grande"></div>
+			</div>
+			<div class="span6 right">
+				<!-- First post Tweet Button -->
+				  <a href="http://twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ page.url }}" data-text="{{ page.title }} -" data-count="none" data-via="{{ site.twitter_name }}">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+			</div>
+		</div>
+		{% endif %}
+		<div class="row">
+		{% if page.readability %}
+			<div class="span6">
+				<div style="margin-left: -5px;margin-bottom:-15px;" class="rdbWrapper" data-show-read="1" data-show-send-to-kindle="1" data-show-print="0" data-show-email="0" data-orientation="0" data-version="1" data-bg-color="#fff" data-text-color="#000"></div><script type="text/javascript">(function() {var s = document.getElementsByTagName("script")[0],rdb = document.createElement("script"); rdb.type = "text/javascript"; rdb.async = true; rdb.src = document.location.protocol + "//www.readability.com/embed.js"; s.parentNode.insertBefore(rdb, s); })();</script>
+			</div>
+		{% endif %}
+			<div class="span6 right">
+				<iframe border="0" scrolling="no" width="78" height="17" allowtransparency="true" frameborder="0"
+				 style="margin-bottom: -3px; z-index: 1338; border: 0px; background-color: transparent; overflow: hidden;"
+				 src="http://www.instapaper.com/e2?url={{site.url}}{{page.url}}&title={{page.title | cgi_escape}}"
+				></iframe>
+			</div>
+		</div>
+		<br/>
+		<hr/>
+		{% if page.comments %}
+		<!-- Post comments -->
+		<div id="disqus_thread"></div>
+		<script type="text/javascript">
+		    var disqus_shortname = '{{ site.disqus_username }}';
+		    var disqus_url = '{{ site.url }}{{ page.url }}';
+		    var disqus_identifier = '{{ page.date | date_to_xmlschema }}';
 
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-{% else %}
-<p>Sorry, comments are disabled for this entry</p>
-{% endif %}
-<hr/>
-<!-- Past posts -->
-<h2>Archive</h2>
-<ol id="archive">
-  {% for post in site.posts offset:1 %}
-    <li>
-      <time datetime="{{ post.date | date: '%Y-%m-%dT%H:%M:%S-08:00' }}">{{ post.date | date: "%d %B, %Y" }}</time>
-      <p><a href="{{ post.url }}">{{ post.title }}</a></p>
-    </li>
-  {% endfor %}
-</ol>
+		    /* * * DON'T EDIT BELOW THIS LINE * * */
+		    (function() {
+		        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+		        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+		    })();
+		</script>
+		{% else %}
+		<p>Sorry, comments are disabled for this entry</p>
+		{% endif %}
+	</div>
+</div>

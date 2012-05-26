@@ -1,0 +1,36 @@
+/* ---------------------------------------------
+	LASTFM.CSS
+-----------------------------------------------*/
+
+#lastfm dl{
+	position:relative;
+	text-align:right;
+	}
+
+#lastfm dl dt{
+	position:absolute;
+
+	}
+#lastfm dl dt a{
+	position:absolute;
+	z-index:100;
+	}
+#lastfm dl dt a:hover{
+	background:none;
+	}
+
+#lastfm .lfm_art img{
+	width:64px;
+	height:64px;
+	}
+
+#lastfm dl dd.lfm_song{
+	font-weight:bold;
+	font-size:12px;
+	white-space:nowrap;
+	overflow:hidden;
+	}
+#lastfm dl dd.lfm_artist,
+#lastfm dl dd.lfm_album{
+	color:#999;
+	}

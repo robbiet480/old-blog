@@ -1,0 +1,35 @@
+---
+layout: default
+title: Robbie Trencheny / Posts
+---
+<div class="row">
+	<div class="span12">
+		<!-- Begin first post -->
+		<article class="hentry">
+			<div class="page-header">
+				<h1 class="entry-title"><a class="post_title" href="{{ site.posts.first.url }}">{{ site.posts.first.title }}</a> <small><time datetime="{{ site.posts.first.date | date: '%Y-%m-%dT%H:%M:%S-08:00' }}">{{ site.posts.first.date | date: "%d %B" }}</time></small></h1>
+			</div>
+			<!-- First post content -->
+			<span class="entry-content">
+			{{ site.posts.first.content }}
+			</span>
+			<div class="row">
+				<div class="span6">
+					{% if site.posts.first.social %}
+					<!-- First post social -->
+					<!-- First post Facebook button -->
+					<div class="fb-like" data-href="{{ site.url }}{{ site.posts.first.url }}" data-send="true" data-layout="button_count" data-width="450" data-show-faces="false" data-colorscheme="light" data-font="lucida grande"></div>
+				</div>
+				<div class="span6 right">
+					<!-- First post comment count -->
+					{% if site.posts.first.comments %}
+					<a href="{{ site.posts.first.url }}#disqus_thread" data-disqus-identifier="{{ site.posts.first.date | date_to_xmlschema }}"></a>
+					{% endif %}
+					<!-- First post Tweet Button -->
+					<a href="http://twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ site.posts.first.url }}" data-text="{{ site.posts.first.title }} -" data-count="none" data-via="{{ site.twitter_name }}">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></span>
+					{% endif %}
+				</div>
+		</article>
+		<!-- End first post -->
+	</div>
+</div>

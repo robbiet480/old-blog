@@ -1,124 +1,417 @@
-<!DOCTYPE html> 
-<html xmlns="http://www.w3.org/1999/xhtml" 
-      xmlns:og="http://ogp.me/ns#" 
-      xmlns:fb="https://www.facebook.com/2008/fbml" 
-      xmlns:hcard="http://www.w3.org/2006/03/hcard"> 
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>{{ page.title }}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# 
-                robbieio: http://ogp.me/ns/apps/robbieio#">
-   <meta charset="UTF-8" />
-   <title>{{ page.title }}</title>
-   <!-- Atom Feed -->
-   <link href="{{ site.url }}/atom.xml" rel="alternate" title="Robbie Trencheny" type="application/atom+xml" />
+		<!-- Atom Feed -->
+		<link href="{{ site.url }}/atom.xml" rel="alternate" title="Robbie Trencheny" type="application/atom+xml" />
 
-   <!-- CSS -->
-   <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen, projection" />
-
-   <!-- Favicons -->
-   <link rel="shortcut icon" type="image/x-icon" href="/images/new_rt.png" />
-   <link rel="icon" type="image/x-icon" href="/images/new_rt.png" />
-
-   <!-- Open Graph -->
-   <meta property="og:type"                             content="blog"> 
-   <meta property="og:url"                              content="{{ site.url }}"> 
-   <meta property="og:image"                            content="/images/new_rt.png">
-   <meta property="og:title"                            content="robbie.io">
-   <meta property="og:description"                      content="robbie trencheny's main dumping ground for writing"> 
-   <meta property="robbieio:owner:street_address"       content="4592 Gold Medal Point, #360"> 
-   <meta property="robbieio:owner:locality"             content="Colorado Springs"> 
-   <meta property="robbieio:owner:region"               content="Colorado"> 
-   <meta property="robbieio:owner:postal_code"          content="80923"> 
-   <meta property="robbieio:owner:country_name"         content="United States"> 
-   <meta property="robbieio:owner:email"                content="me@robbiet.us"> 
-   <meta property="robbieio:owner:phone_number"         content="925-884-3728">
-   <meta property="robbieio:owner:website"              content="http://robbie.io">
+		<!-- Open Graph -->
+		<meta property="og:type"                             content="blog"> 
+		<meta property="og:url"                              content="{{ site.url }}"> 
+		<meta property="og:image"                            content="/images/new_rt.png">
+		<meta property="og:title"                            content="robbie.io">
+		<meta property="og:description"                      content="robbie trencheny's main dumping ground for writing"> 
+		<meta property="robbieio:owner:street_address"       content="4592 Gold Medal Point, #360"> 
+		<meta property="robbieio:owner:locality"             content="Colorado Springs"> 
+		<meta property="robbieio:owner:region"               content="Colorado"> 
+		<meta property="robbieio:owner:postal_code"          content="80923"> 
+		<meta property="robbieio:owner:country_name"         content="United States"> 
+		<meta property="robbieio:owner:email"                content="me@robbiet.us"> 
+		<meta property="robbieio:owner:phone_number"         content="925-884-3728">
+		<meta property="robbieio:owner:website"              content="http://robbie.io">
 
 
-   <!-- Facebook -->
-   <meta property="fb:admins"                           content="{{ site.facebook_uid }}" name="fb:admins"/>
-   <meta property="fb:app_id"                           content="295385377144096"> 
+		<!-- Facebook -->
+		<meta property="fb:admins"                           content="{{ site.facebook_uid }}" name="fb:admins"/>
+		<meta property="fb:app_id"                           content="295385377144096"> 
 
-   <!-- Bit.ly -->
-   <meta name="bitly-verification"                      content="1f83bf0bbdf5"/>
-   
-   <!-- SEO -->
-   <meta name="keywords"                                content="robbie trencheny, robbie, trencheny, mac, apple, startup, video chat, video, music, electronic, hacking, hackerspaces, colorado springs, colorado, colorado springs colorado, bay area, nerd, geek, teen" />
-   <meta name="description"                             content="Robbie Trencheny's main dumping ground for writing" />
-   <meta name="author"                                  content="Robbie Trencheny" />
-   <meta name="robots"                                  content="all" />
+		<!-- Bit.ly -->
+		<meta name="bitly-verification"                      content="1f83bf0bbdf5"/>
+		
+		<!-- SEO -->
+		<meta name="keywords"                                content="robbie trencheny, robbie, trencheny, mac, apple, startup, video chat, video, music, electronic, hacking, hackerspaces, colorado springs, colorado, colorado springs colorado, bay area, nerd, geek, teen" />
+		<meta name="description"                             content="Robbie Trencheny's main dumping ground for writing" />
+		<meta name="author"                                  content="Robbie Trencheny" />
+		<meta name="robots"                                  content="all" />
 
-   <!-- iPhone -->
-   <meta name="apple-mobile-web-app-capable"            content="yes" />
-   <meta name="apple-mobile-web-app-status-bar-style"   content="black-translucent" />
-   <meta name="viewport"                                content="width = device-width, initial-scale = 0.5, maximum-scale = 5" />
-   <link rel="apple-touch-icon-precomposed" href="{{ site.url }}/images/new_rt.png"/>
-   
-   <!-- JavaScript -->
-   <script type="text/javascript" src="/js/script.min.js"></script>
-</head>
-<body>
-<div id="fb-root"></div>
-<!-- Facebook -->
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-<div class="site">
-  <!-- Header -->
-  <div class="title">
-    <a title="input/output">robbie/trencheny</a>
-    <a class="extra" href="/">home</a>
-    <a class="extra" href="/about.html">about</a>
-    <a class="extra" href="http://t.robbie.io/" target="_blank">uncut</a>
-    <a class="extra" href="/life.html">lifestream</a>
-    <a class="extra" href="/contact.html">contact</a>
-  </div>
-  
-  {{ content }}
-  
-  <hr/>
-  <!-- Footer -->
-  <div id="footer">
-    <p>
-      <a href="{{ base.url }}/about.html">Robbie Trencheny</a> is a 20 year old web developer, systems administrator and startup <a href="http://sutterstudios.com">founder</a> living in Colorado Springs, Colorado. You can follow me on <a href="http://twitter.com/robbie">Twitter</a>, hear what I listen to on <a href="http://last.fm/user/robbiet480/">Last.fm</a> or fork my code on <a href="http://github.com/robbiet480">GitHub</a>. If you want you can even <a href="tel:+19258843728">call</a> me.
-    </p>
-  </div>
-  <!-- hCard -->
-  <div id="hcard-Robert-Xavier-Trencheny" class="byline author vcard">
-    <img style="float:left; margin-right:4px" src="/images/new_rt.png" alt="photo of Robert" class="photo"/>
-   <a class="url fn n" href="http://robbie.io">  <span class="given-name">Robert</span>
-    <span class="additional-name">Xavier</span>
-    <span class="family-name">Trencheny</span>
-  </a>
-   <div class="org">Sutter Studios, Inc.</div>
-   <a class="email" href="mailto:me@robbiet.us">me@robbiet.us</a>
-   <div class="adr">
-    <div class="street-address">4592 Gold Medal Point, #360</div>
-    <span class="locality">Colorado Springs</span>
-    <span class="region">Colorado</span>
-    <span class="postal-code">80923</span>
-    <span class="country-name">United States Of America</span>
-   </div>
-   <div class="tel">+1-925-884-3728</div>
-   <a class="url" href="aim:goim?screenname=robbiet480">AIM</a>
-   <a class="url" href="xmpp:robbie.trencheny@gmail.com">Jabber</a>
- </div>
-  <!-- Disqus code for X replies link -->
-  <script type="text/javascript">
-      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-      var disqus_shortname = '{{ site.disqus_username }}'; // required: replace example with your forum shortname
+		<!-- iOS -->
+		<meta name="apple-mobile-web-app-capable"            content="yes" />
 
-      /* * * DON'T EDIT BELOW THIS LINE * * */
-      (function () {
-          var s = document.createElement('script'); s.async = true;
-          s.type = 'text/javascript';
-          s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-          (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-      }());
-  </script>
-</div>
-</body>
+		<!-- Le styles -->
+		<link href="/css/bootstrap.css" rel="stylesheet">
+		<link href="/css/bootstrap-responsive.css" rel="stylesheet">
+
+		<style type="text/css">
+			.right {
+				text-align:right;
+			}
+			ul.lastfm_listened {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+				ul.lastfm_listened li {
+					border-bottom: 1px solid #ccc;
+					padding: 8px 0;
+					position: relative;
+					height:64px;
+				}
+				ul.lastfm_listened li:hover {
+					background-color: #eee;
+				}
+					ul.lastfm_listened a {
+						color: #222;
+						z-index:100;
+					}
+					ul.lastfm_listened li:hover a {
+						text-decoration: underline;
+					}
+					ul.lastfm_listened p {
+						margin: 0;
+						font-size: 12px;
+						padding-right:5px;
+					}
+					ul.lastfm_listened .pull {
+						position: absolute;
+						left: 4px;
+						top: 10px;
+					}
+				ul.lastfm_listened li.dump {
+					background: #eee;
+				}
+
+				.lfm_art {
+					float:left;
+					padding-left:5px;
+				}
+				.lastfm_item {
+					height:68px;
+				}
+			ul.trakt_watched {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+				ul.trakt_watched li {
+					border-bottom: 1px solid #ccc;
+					padding: 8px 0;
+					position: relative;
+					height:150px;
+				}
+				ul.trakt_watched li:hover {
+					background-color: #eee;
+				}
+					ul.trakt_watched a {
+						color: #222;
+					}
+					ul.trakt_watched .episode_title {
+						position:relative;
+						width:80%;
+					}
+					ul.trakt_watched li:hover a {
+						text-decoration: underline;
+					}
+					ul.trakt_watched p {
+						margin: 0;
+						font-size: 12px;
+					}
+					ul.trakt_watched .pull {
+						position: absolute;
+						right: 4px;
+						top: 10px;
+					}
+				ul.trakt_watched li.dump {
+					background: #eee;
+				}
+			ul.tweet_list {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			}
+			ul.tweet_list li {
+			border-bottom: 1px solid #ccc;
+			padding: 8px 0;
+			position: relative;
+			height:64px;
+			}
+			ul.tweet_list li:hover {
+			background-color: #eee;
+			}
+			ul.tweet_list a {
+			color: #222;
+			}
+			ul.tweet_list li:hover a {
+			text-decoration: underline;
+			}
+			ul.tweet_list p {
+			margin: 0;
+			font-size: 12px;
+			position:relative;
+			width:80%;
+			}
+			ul.tweet_list .pull {
+			position: absolute;
+			right: 4px;
+			top: 10px;
+			}
+			ul.tweet_list li.dump {
+			background: #eee;
+			}
+			ul.instagram_pics {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+				ul.instagram_pics li {
+					border-bottom: 1px solid #ccc;
+					padding: 8px 0;
+					position: relative;
+					height:150px;
+				}
+					ul.instagram_pics li:hover {
+					background-color: #eee;
+					}
+						ul.instagram_pics a {
+						color: #222;
+						}
+						ul.instagram_pics li:hover a {
+						text-decoration: underline;
+						}
+						ul.instagram_pics p {
+						margin: 0;
+						font-size: 12px;
+						padding-right:5px;
+						}
+						ul.instagram_pics .pull {
+						position: relative;
+						left: 4px;
+						float:left;
+						}
+					ul.instagram_pics li.dump {
+					background: #eee;
+					}
+		.entry-title a {
+			color:#333;
+		}
+		.byline {
+			display:none;
+		}
+		</style>
+
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<!-- Le fav and touch icons -->
+		<link rel="shortcut icon" type="image/x-icon" href="/images/new_rt.png" />
+		<link rel="icon" type="image/x-icon" href="/images/new_rt.png" />
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/apple-touch-icon-114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/apple-touch-icon-72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="/img/apple-touch-icon-57-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="{{ site.url }}/images/new_rt.png"/>
+
+		<!-- Le JavaScript -->
+		<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+		<script src="/js/bootstrap.min.js" type="text/javascript"></script>
+		<script src="/js/engage.lastfm.js" type="text/javascript"></script>
+		<script src="/js/jquery.url.js" type="text/javascript"></script>
+		<script src="/js/date.extensions.js" type="text/javascript"></script>
+
+		<script type="text/javascript">
+		function escapeHTML(text) {
+			return $('<div/>').html(text).text()
+		}
+
+		function linkify_entities(tweet) {
+			if (!(tweet.entities)) {
+				return escapeHTML(tweet.text)
+			}
+			
+			// This is very naive, should find a better way to parse this
+			var index_map = {}
+			
+			$.each(tweet.entities.urls, function(i,entry) {
+				index_map[entry.indices[0]] = [entry.indices[1], function(text) {return "<a href='"+escapeHTML(entry.expanded_url)+"'>"+escapeHTML(entry.expanded_url)+"</a>"}]
+			})
+			
+			$.each(tweet.entities.hashtags, function(i,entry) {
+				index_map[entry.indices[0]] = [entry.indices[1], function(text) {return "<a href='http://twitter.com/search?q="+escape("#"+entry.text)+"'>"+escapeHTML(text)+"</a>"}]
+			})
+			
+			$.each(tweet.entities.user_mentions, function(i,entry) {
+				index_map[entry.indices[0]] = [entry.indices[1], function(text) {return "<a title='"+escapeHTML(entry.name)+"' href='http://twitter.com/"+escapeHTML(entry.screen_name)+"'>"+escapeHTML(text)+"</a>"}]
+			})
+			
+			var result = ""
+			var last_i = 0
+			var i = 0
+			
+			// iterate through the string looking for matches in the index_map
+			for (i=0; i < tweet.text.length; ++i) {
+				var ind = index_map[i]
+				if (ind) {
+					var end = ind[0]
+					var func = ind[1]
+					if (i > last_i) {
+						result += escapeHTML(tweet.text.substring(last_i, i))
+					}
+					result += func(tweet.text.substring(i, end))
+					i = end - 1
+					last_i = end
+				}
+			}
+			
+			if (i > last_i) {
+				result += escapeHTML(tweet.text.substring(last_i, i))
+			}
+			
+			return result
+		}
+			$(function() {
+				var url = $.url();
+				var filename = url.attr('file');
+				if(filename == "posts.html") {
+					$('#posts_nav').attr('class','active');
+				} else if(filename == "about.html") {
+					$('#about_nav').attr('class','active');
+				} else if(filename == "contact.html") {
+					$('#contact_nav').attr('class','active');
+				} else if(filename = " ") {
+					$('#home_nav').attr('class','active');
+				}
+				if(filename = " ") {
+						// set your twitter id
+						var user = 'robbie';
+
+						// using jquery built in get json method with twitter api, return only one result
+						$.getJSON('https://api.twitter.com/1/statuses/user_timeline.json?include_entities=true&include_rts=true&screen_name='+user+'&count=5&callback=?', function(data)      {
+							
+							$.each(data,function(key,value){
+								var tweet = linkify_entities(value);
+								var tweet_url = "http://twitter.com/"+value.user.screen_name+"/status/"+value.id_str;
+								var tweet_time = new Date(value.created_at).toRelativeTime();
+								if(value.in_reply_to_screen_name) {
+									var tweet_avatar = 'https://api.twitter.com/1/users/profile_image?screen_name='+value.in_reply_to_screen_name+'&size=bigger';
+									var user_link = 'http://twitter.com/'+value.in_reply_to_screen_name;
+								} else {
+									var tweet_avatar = 'https://api.twitter.com/1/users/profile_image?screen_name='+user+'&size=bigger';
+									var user_link = 'http://twitter.com/'+user;
+								}
+								$('.tweet_list').append('<li class="tweet_item"><p>'+tweet+'</p><a href="'+tweet_url+'">'+tweet_time+'</a><br><a class="pull" href="'+user_link+'"><img width="64" height="64" src="'+tweet_avatar+'"></a></li>').html();
+							})
+						});
+					$('ul.lastfm_listened').lastFM({
+						username: 'robbiet480',
+						apikey: '154a20723e0f2c27a5a5a1ffe2401c3f',
+						number: 4,
+						artSize: 'medium',
+						noart: '/img/noartwork.gif',
+						onComplete: function(){
+						}
+					});
+					$.ajax({
+						url:'http://api.trakt.tv/user/profile.json/e3c4a73b474cb79740c67e31a1d10450/robbiet480',
+						dataType:'jsonp'
+					}).done(function(msg){
+						$.each(msg.watched, function(key, value){
+							$('.trakt_watched').append('<li class="trakt_item"><a href="'+value.show.url+'">'+value.show.title+'</a><br><a class="episode_title" href="'+value.episode.url+'">'+value.episode.title+'</a><p>S'+value.episode.season+'E'+value.episode.number+'</p><a class="pull" href="'+value.show.url+'"><img src="'+value.show.images.poster+'"  width="90" height="50" alt="Show" class="trakt_overlay" /></a></li>');
+
+						})
+					});
+					$.ajax({
+						url:'http://instajson.herokuapp.com/feed/robbiet480.json?callback=?',
+						dataType:'jsonp'
+					}).done(function(msg){
+						$.each(msg,function(key,value){
+							console.log(value);
+							if(key <= 4) {
+								var picture_time = new Date(value.created_time*1000).toRelativeTime();
+								$('.instagram_pics').append('<li class="instagram_item"><div class="instagram_picture"><a href="'+value.link+'" title="'+value.caption.text+'" target="_blank" class="pull"><img src="'+value.images.thumbnail.url+'" alt="'+value.caption.text+'"></a></div><p class="instagram_title">'+value.caption.text+'</p><p class="instagram_time">'+picture_time+'</p></li>');
+							}
+						})
+					});
+				}
+				$('ul li:last-child').css('border-bottom', 'none');
+			});
+		</script>
+		
+	</head>
+	<body>
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) {return;}
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+		<div class="container">
+			<div class="row">
+				<div class="span12">
+					<div class="page-header">
+					  <h1>Robbie Trencheny <small>20 year old engineer, startup addict, living in Colorado Springs</small></h1>
+					</div>
+					<ul class="nav nav-pills">
+						<li id="home_nav"><a href="/">Home</a></li>
+						<li id="posts_nav"><a href="/posts.html">Posts</a></li>
+						<li id="about_nav"><a href="/about.html">About</a></li>
+						<li id="contact_nav"><a href="/contact.html">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span12">
+					{{ content }}
+				</div>
+			</div>
+			<div class="row">
+				<div class="span12">
+					<h1>Posts</h1>
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Title</th>
+								<th style="text-align:right;">Words</th>
+								<th style="text-align:right;">Date</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for post in site.posts offset:1 %}
+							<tr>
+								<td><a href="{{ post.url }}">{{ post.title }}</a></td>
+								<td style="text-align:right;">{{ post.content | number_of_words }}</td>
+								<td style="text-align:right;">{{ post.date | date: "%B %d, %Y" }}</td>
+							</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class="span6">
+					<p>&copy; 2012 Robert Xavier Trencheny Junior (or the second, whichever you prefer).</p>
+				</div>
+				<div class="span6 right">
+					<p>Powered by: <a href="http://jekyllrb.com/">Jekyll</a>, <a href="http://twitter.github.com/bootstrap/">Bootstrap</a> and <a href="http://jquery.org">jQuery</a></p>
+			</div>
+		</div>
+		<!-- Disqus code for X replies link -->
+		<script type="text/javascript">
+		    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+		    var disqus_shortname = '{{ site.disqus_username }}'; // required: replace example with your forum shortname
+
+		    /* * * DON'T EDIT BELOW THIS LINE * * */
+		    (function () {
+		        var s = document.createElement('script'); s.async = true;
+		        s.type = 'text/javascript';
+		        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+		        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+		    }());
+		</script>
+	</body>
 </html>

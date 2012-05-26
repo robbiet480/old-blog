@@ -1,44 +1,41 @@
 ---
 layout: default
-title: robbie.io
+title: Robbie Trencheny
 ---
-<div id="home">
-<!-- Begin first post -->
-<article class="hentry">
-  <!-- First post datetime -->
-  <time datetime="{{ site.posts.first.date | date: '%Y-%m-%dT%H:%M:%S-08:00' }}">{{ site.posts.first.date | date: "%d %B" }}</time>
-  <!-- First post title -->
-  <h2 class="entry-title"><a class="post_title" href="{{ site.posts.first.url }}">{{ site.posts.first.title }}</a></h2>
-  <!-- First post content -->
-  <span class="entry-content">
-  {{ site.posts.first.content }}
-  </span>
-  {% if site.posts.first.social %}
-  <span id="social">
-  <!-- First post social -->
-  <!-- First post Facebook button -->
-  <div class="fb-like" data-href="{{ site.url }}{{ site.posts.first.url }}" data-send="true" data-layout="button_count" data-width="450" data-show-faces="false" data-colorscheme="dark" data-font="lucida grande"></div>
-  <!-- First post comment count -->
-  {% if site.posts.first.comments %}
-  <a href="{{ site.posts.first.url }}#disqus_thread" data-disqus-identifier="{{ site.posts.first.date | date_to_xmlschema }}"></a>
-  {% endif %}
-  <!-- First post Tweet Button -->
-  <span style="float:right;">
-    <a href="http://twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ site.posts.first.url }}" data-text="{{ site.posts.first.title }} -" data-count="none" data-via="{{ site.twitter_name }}">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></span>
-  </span>
-  {% endif %}
-  <br/>
-</article>
-<!-- End first post -->
-<hr/>
-<!-- Old posts -->
-<h2>Archive</h2>
-<ol id="archive">
-  {% for post in site.posts offset:1 %}
-    <li>
-      <time datetime="{{ post.date | date: '%Y-%m-%dT%H:%M:%S-08:00' }}">{{ post.date | date: "%d %B, %Y" }}</time>
-      <p><a href="{{ post.url }}">{{ post.title }}</a></p>
-    </li>
-  {% endfor %}
-</ol>
+<div class="row">
+	<div class="span6">
+		<h1>Twitter <a href="http://twitter.com/robbie"><img src="/img/social_media/twitter-16x16.png"></a></h1>
+		<hr>
+		<div id="twitter"><ul class="tweet_list"></ul></div>
+		<hr>
+	</div>
+	<div class="span6 right">
+		<h1><a href="http://lastfm.com/robbie480"><img src="/img/social_media/lastfm-16x16.png"></a> Last.fm</h1>
+		<hr>
+		<div id="lastfm">
+			<ul class="lastfm_listened">
+				<li class="lastfm_item">
+					<div class="lfm_art"></div>
+					<p class="lfm_song"></p>
+					<p class="lfm_artist"></p>
+					<p class="lfm_album"></p>
+				</li>
+			</ul>
+		</div>
+		<hr>
+	</div>
+</div>
+<div class="row">
+	<div class="span6">
+		<h1>Trakt.tv</h1>
+		<hr>
+		<div id="trakt"><ul class="trakt_watched"></ul></div>
+		<hr>
+	</div>
+	<div class="span6 right">
+		<h1>Instagram</h1>
+		<hr>
+		<div id="instagram"><ul class="instagram_pics"></ul></div>
+		<hr>
+	</div>
 </div>
