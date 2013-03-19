@@ -1,3 +1,4 @@
+# This is no longer used or updated as I never write anything
 # Jekyll for [robbie.io](http://robbie.io)
 
 Everything in this repository is automatically transformed by [Jekyll](http://github.com/mojombo/jekyll) into a static site whenever I push this repository to GitHub and is uploaded to [robbie.io](http://robbie.io).
